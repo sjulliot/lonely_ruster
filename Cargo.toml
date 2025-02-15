@@ -4,3 +4,13 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+num-rational = "0.4.0"
+num-integer = "0.1.44"
+itertools = "0.14.0"
+rayon = "1.5.3"
+
+[lib]
+name = "lonely_ruster"
+path = "src/lib.rs"
+
+[dev-dependencies]
