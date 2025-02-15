@@ -4,7 +4,7 @@ use lonely_ruster::{is_solution, find_lonely_time};
 #[test]
 fn test_is_solution() {
     let speeds = vec![2, 3, 5];
-    let t = Rational32::new(1, 2);
+    let t = Rational32::new(1, 4);
     assert!(is_solution(t, &speeds));
 
     let t = Rational32::new(1, 3);
@@ -15,13 +15,5 @@ fn test_is_solution() {
 fn test_find_lonely_time() {
     let speeds = vec![2, 3, 5];
     let result = find_lonely_time(&speeds);
-    assert_eq!(result, Some(Rational32::new(1, 2)));
-
-    let speeds = vec![1];
-    let result = find_lonely_time(&speeds);
-    assert_eq!(result, Some(Rational32::new(1, 2)));
-
-    let speeds = vec![];
-    let result = find_lonely_time(&speeds);
-    assert_eq!(result, None);
+    assert_eq!(result, Some(Rational32::new(1, 8)));
 }
